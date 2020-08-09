@@ -1,6 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                                               %
-%             PHENIX Decadal Plan 2010 to beyond 2015           %
+%             sPHENIX BUP for 2020           %
 %                                                               %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -68,6 +68,10 @@
 \renewcommand{\textfraction} {0.1}
 \renewcommand{\floatpagefraction} {0.8}
 
+\newcommand{\pt}{\mbox{$p_T$}\xspace}
+\newcommand{\nb}{\mbox{nb$^{-1}$}\xspace}
+\newcommand{\pb}{\mbox{pb$^{-1}$}\xspace}
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
@@ -125,7 +129,16 @@
 \setcounter{chapter}{0}
 \setcounter{page}{1}
 
+\input{introduction}
+\input{project}
 \input{bup}
+\input{cad}
+\input{commissioning}
+\input{streaming_readout}
+\input{physics_projections}
+\input{species_scan}
+\input{summary}
+\input{appendix}
 
 \cleardoublepage
 
@@ -135,15 +148,15 @@
 
 \backmatter
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Tables}
-\listoftables
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Tables}
+%\listoftables
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{List of Figures}
-\listoffigures
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{List of Figures}
+%\listoffigures
 
 \cleardoublepage
 \phantomsection
