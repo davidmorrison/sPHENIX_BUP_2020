@@ -13,6 +13,7 @@
 \usepackage{amssymb, amsmath}
 \usepackage{mathpazo}
 \usepackage{float,graphicx}
+\graphicspath{{figs/}} 
 \usepackage[figuresright]{rotating}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{microtype}
@@ -59,7 +60,9 @@
 \usepackage[text={6.5in,8.75in},headheight=15pt,centering]{geometry}
 \usepackage{xspace}
 
-\DeclareGraphicsExtensions{.pdf,.png}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\DeclareUnicodeCharacter{2009}{\,}
+
 \newcommand{\filenamedot}{.}
 \setlength{\parindent}{0.0in}
 \setlength{\parskip}{0.1in}
@@ -67,10 +70,6 @@
 \renewcommand{\bottomfraction} {0.9}
 \renewcommand{\textfraction} {0.1}
 \renewcommand{\floatpagefraction} {0.8}
-
-\newcommand{\pt}{\mbox{$p_T$}\xspace}
-\newcommand{\nb}{\mbox{nb$^{-1}$}\xspace}
-\newcommand{\pb}{\mbox{pb$^{-1}$}\xspace}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
