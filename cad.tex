@@ -33,6 +33,8 @@ The same calculated quantities, now updated by C-AD, and for a 2 milliradian cro
 
 Similar issues of acceptance and radiation load / IBF have to be balanced for \pp and \pau running.   The current proposal is to run with the same 2 milliradian crossing angle for these systems as well.    We highlight that in \pp and \pau running, the larger collision rate with lower track multiplicities may lead to small IBF fluctuations since the collisions are spread out in $z$ vertex and there are more throws of the dice to average out relative to a smaller number of \auau collisions with highly variable multiplicity.     It may be that there is thus a somewhat smaller crossing angle that will be optimal for the smaller collision systems.    
 
+\section{Summary of Projected Luminosities} 
+
 Wolfram Fischer has provided a {\textsc{Mathematica}} notebook for estimating the collision rate and z-vertex collision distribution as a function of beam crossing angle.\cite{Ruggiero:2002jn}  After confirming values with CA-D, we include the generated set of results here for completeness.    
 
 \begin{figure}
@@ -58,83 +60,4 @@ Wolfram Fischer has provided a {\textsc{Mathematica}} notebook for estimating th
     \caption{{\textcolor{red}{NEED REAL PLOTS HERE}}C-AD {\textsc{Mathematica}} generated \pp collision rate (left - {\textcolor{red}{PLACEHOLDER}}) and $z$-vertex Gaussian $\sigma$ (right) as a function of beam crossing angle.}
     \label{fig:mathpau1}
 \end{figure}
-
-
-{\textcolor{red}{THE BELOW IS NOT UPDATED -- IS IT NEEDED AT ALL.   I HAD WRITTEN THIS INTO THE EARLIER 5-YEAR PLAN SPHENIX NOTE SO THAT IT WOULD BE MORE STANDALONE.}}
-\section{Summary of C-AD Numbers}
-
-Here are the basic inputs for the three collisions systems considered in this sPHENIX run plan (\pp, \pau, \auau all at 200 GeV).
-
-\subsubsection{\auau at 200 GeV}
-
-The C-AD projections are summarized in their document, Table 4.   We 
-reproduce some of those key values here in Table~\ref{tab:auauspecs}.  
-
-\begin{table}[h]
-\centering
-\caption{Summary of C-AD key values for \auau at 200 GeV running with the year labels as given in the C-AD document.
-\label{tab:auauspecs}}
-\bigskip
-\begin{tabular}{ | c | c | c | c | c | c | c | c |}
-\hline
-Mode & \nb/wk & \nb/wk & $f_{z10}$ & $f_{z10}$ & ave/peak & peak rate & peak rate $\times f_{z10}$ \\ 
-   	 & [min] & [max] & [min] & [max] &  & [max] & [max] \\ \hline
-	Au+Au~(2022E) & 3 & 4.75 & 0.19 & 0.3 & 0.6 & 1.5E5 & 4.5E4 \\ \hline
-	Au+Au~(2024E) & 3 & 7.02 & 0.3 & 0.3 & 0.6  & 2.2E5 & 6.6E4  \\ \hline
-	Au+Au~(2026E) & 3 & 7.51 & 0.3 & 0.3 & 0.6  & 2.4E5 & 7.1E4  \\ \hline 
-\end{tabular}
-\end{table}
-
-We consider running \auau in three calendar years (Year-1, Year-3, Year-5).   For the Year-1 run, we utilize the C-AD values they label as {\bf{2022E}}, where the minimum values correspond to those achieved in the 2016 run and the maximum are 58\% higher.   Wolfram Fischer has provided us with Figure~\ref{fig:auaustore} showing an example "best store" from Run-16 \auau at 200 GeV, where "best" is actually one of many stores that were reproduced with the same settings.  
-The $f_{z10} = 0.19$ from Run-16 \auau is used as the minimum value, and 
-$f_{z10} = 0.30$ is the projected maximum value.
-
-\begin{figure}
-\includegraphics[]{figure_cad_run16auau_examplestore}
-\caption{Run-16 \auau at 200 GeV store.   The black line shows the luminosity (left y-axis units) as a function of time in store in hours.   The red dashed line shows the fraction of collisions within $\pm$ 10 cm. \label{fig:auaustore}}
-\end{figure}
-
-\subsubsection{\pp at 200 GeV}
-
-The C-AD projections are summarized in their document, Table 6.   We 
-reproduce some of those key values here in Table~\ref{tab:ppspecs}.  
-Wolfram Fischer has provided us with Figure~\ref{fig:auaustore} showing an example "best store" from Run-15 \pp at 200 GeV, where "best" is actually one of many stores that were reproduced with the same settings.  
-
-\begin{table}[h]
-\centering
-\caption{Summary of C-AD key values for \pp at 200 GeV running.
-\label{tab:ppspecs}}
-\bigskip
-\begin{tabular}{ | c | c | c | c | c | c | c | c |}
-\hline
-Mode & \pb/wk & \pb/wk & $f_{z10}$ & $f_{z10}$ & ave/peak & peak rate & peak rate $\times f_{z10}$ \\ 
-   	 & [min] & [max] & [min] & [max] &  & [max] & [max] \\ \hline
-	p+p~(2023E) & 25 & 64 & 0.16 & 0.19 & 0.6 & 1.2E7 & 2.4E6 \\ \hline
-	p+p~(2025E) & 25 & 64 & 0.19 & 0.19 & 0.6  & 1.2E7 & 2.4E6  \\ \hline
-\end{tabular}
-\end{table}
-
-\begin{figure}
-\includegraphics[]{figure_cad_run15pp200_examplestore}
-\caption{Run-15 \pp at 200 GeV store.   The black line shows the luminosity (left y-axis units) as a function of time in store in hours.   The red dashed line shows the fraction of collisions within $\pm$ 10 cm.}
-\end{figure}
-
-\subsubsection{\pau at 200 GeV}
-
-The C-AD projections are summarized in their document, Table 8.   We 
-reproduce some of those key values here in Table~\ref{tab:pauspecs}.    
-
-\begin{table}[h]
-\centering
-\caption{Summary of C-AD key values for \pau at 200 GeV running.
-\label{tab:pauspecs}}
-\bigskip
-\begin{tabular}{ | c | c | c | c | c | c | c | c |}
-\hline
-Mode & \pb/wk & \pb/wk & $f_{z10}$ & $f_{z10}$ & ave/peak & peak rate & peak rate $\times f_{z10}$ \\ 
-   	 & [min] & [max] & [min] & [max] &  & [max] & [max] \\ \hline
-	p+Au~(2023E) & 0.14 & 0.35 & 0.17 & 0.25 & 0.6 & 2.8E6 & 6.9E5 \\ \hline
-\end{tabular}
-\end{table}
-
 
