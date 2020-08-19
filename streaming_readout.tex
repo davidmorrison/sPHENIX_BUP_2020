@@ -5,31 +5,80 @@ As proposed in Chapter~\ref{chap:beam_use_proposal}, the sPHENIX data taking wil
 
 REMOVE TOO MANY SPECIFIC NUMBERS FROM HERE...
 
-In the first three years of sPHENIX operation, the collaboration envisions a run plan sampling 2 trillion \pp collisions (50~$pb^{-1}$)  with electron and jet triggers, as well as recording 140 billion M.B. Au+Au collisions. Comparison of the A+A HF observables to that of the \pp data reveals how the HF probes interact with QGP. However, due to the rareness of the HF signals in the \pp collisions, the currently envisioned sPHENIX detector equipped with a traditional triggered  DAQ cannot efficiently sample HF production below a $p_T$ of 10 GeV$/c$. 
+In the first three years of sPHENIX operation, the collaboration
+envisions a run plan sampling 2 trillion \pp collisions (50~\pb) with
+electron and jet triggers, as well as recording 140 billion M.B. \AuAu
+collisions. Comparison of HF observables in heavy-ion collisions to
+those in \pp reveals how the HF probes interact with QGP.  However,
+due to the rareness of the HF signals in the \pp collisions, the
+currently envisioned sPHENIX detector equipped with a traditional
+triggered DAQ cannot efficiently sample HF production below a $p_T$ of
+10~GeV$/c$.
  
-A study~[SRO tech note] found that the sPHENIX tracking detectors can be upgraded to record a large amount of \pp collisions via a streaming readout upgrade in the data acquisition (DAQ) firmware and software. 
-(Embed something we want PAC to write in report) 
-This chapter will discuss the proposed implementation and benefit of this upgrade. 
- 
+A study~[SRO tech note] found that the sPHENIX tracking detectors can
+be upgraded to record a large amount of \pp collisions via a streaming
+readout upgrade in the data acquisition (DAQ) firmware and software.
+(Embed something we want PAC to write in report) This chapter will
+discuss the proposed implementation and benefit of this upgrade.
 
 \subsection{Streaming Readout}
  
- The currently envisioned sPHENIX experiment is designed to take large statistics of calorimeter triggered events in the \pp collisions, which will sample 2 trillion delivered \pp collisions in the vertex acceptance of the silicon tracker (18\% of all collisions) []. For observables that utilize calorimeter for analysis, a trigger can usually be designed, such as leptonic decays at higher $p_T$, jets, photon, and their correlation observables. However, low-$p_T$  ($<10$ GeV$/c$) HF hadrons usually decay hadronically and leave relatively low signals in the calorimeters when compared with the underlying event. Therefore, they cannot be efficiently collected via calorimeter triggers, which have a hadron energy threshold of 10 GeV. Therefore, in the currently envisioned sPHENIX detector, there is no efficient way in triggering such events in the \pp collisions. And in the 15 kHz sPHENIX trigger bandwidth, one would only reasonable request around few kHz of the minimum bias \pp trigger for this new program. Assuming 50\% vertex range selection purity , 1 kHz M.B. trigger leads to recording $2\times10^{-4}$ of the delivered luminosity . This translates to quite limited statistics for these rare low-$p_T$ HF signals as quantified in Table X.
- 
+The currently envisioned sPHENIX experiment is designed to take large
+statistics of calorimeter triggered events in the \pp collisions,
+which will sample 2 trillion delivered \pp collisions in the vertex
+acceptance of the silicon tracker (18\% of all
+collisions)~\cite{something}. For observables that utilize the
+calorimeters for analysis, a trigger can usually be designed, such as
+leptonic decays at higher $p_T$, jets, photon, and their correlation
+observables.  However, low-$p_T$ ($<10$~GeV$/c$) HF hadrons usually
+decay hadronically and leave relatively small signals in the
+calorimeters when compared with the underlying event. Therefore, they
+cannot be efficiently collected via calorimeter triggers, which have a
+hadron energy threshold of 10~GeV. Therefore, in the currently
+envisioned sPHENIX detector, there is no efficient way to trigger on
+such events in \pp collisions.  In the 15~kHz sPHENIX trigger
+bandwidth, one would only reasonably request around few kHz of the
+minimum bias \pp trigger bandwidth for this new program. Assuming a
+vertex range selection purity of 50\%, a 1~kHz minimum bias trigger
+leads to recording $2\times10^{-4}$ of the delivered luminosity. This
+translates to rather limited statistics for these rare low-$p_T$ HF
+signals as quantified in Table~\ref{tab:something}.
  
 \subsection{Hybrid Trigger-Streaming Readout in Run24}
  
- The upgraded DAQ is illustrated in Figure X and summarized in Table X. For all three tracking detectors, their FEE and DAQ hardware supports the streaming mode and provides the capability needed for this upgrade. The main work will focus on DAQ firmware and software development that enabling the streaming capability. 
-This upgrade carries out the upgrade enabling the collection of a sufficient amount of minimum bias \pp events. That is 10\% delivered luminosity (see next Chapter), 200 billion events in vertex tracker acceptance, which is a factor of 500 improvements. This dataset enables a comprehensive low-$p_T$ hadron program as discussed in this subsection. The analysis for these HF hadronic channels does not require calorimeter information. Instead, as illustrated in Figure X, they can be identified with the precision tracking detectors of sPHENIX (at $p_T$=5 GeV$/c$, $\sigma(p)/p=1\%$, $\sigma(DCA)<10$~$\mu$m ) via a combination of decay topology and invariant mass, as demonstrated for even the busiest events of Au+Au collisions through detailed simulation studies in []. 
+The upgraded DAQ is illustrated in Figure~\ref{fig:something} and
+summarized in Table~\ref{tab:something}.  The FEE and DAQ hardware of
+each of the three tracking detectors supports a streaming readout mode
+and provides the capability needed for this upgrade. The main work
+will focus on DAQ firmware and software development that enabling the
+streaming capability.  This upgrade would enable the collection of
+sufficient minimum bias in \pp events.  That is, 10\% delivered
+luminosity (see next Chapter) or 200~billion events in the acceptance
+of the vertex tracker, which is a factor of 500 improvement. This
+dataset enables a comprehensive low-$p_T$ hadron program as discussed
+here.  The analysis of these HF hadronic channels does not require
+calorimeter information. Instead, as illustrated in
+Figure~\ref{something}, they can be identified with the precision
+tracking detectors of sPHENIX (at $p_T=5$~GeV$/c$, $\sigma(p)/p=1\%$,
+$\sigma(DCA)<10$~$\mu$m ) via a combination of decay topology and
+invariant mass, as demonstrated for even the busiest events of Au+Au
+collisions through detailed simulation studies in~\cite{something}.
 
- 
-
- As summarized in Table ??, upgraded DAQ for sPHENIX trackers will stream recording 500 times higher statistics of M.B. \pp collisions, which will enable the HF measurements in this key kinematic region.
-
+As summarized in Table~\ref{tab:something}, an upgraded DAQ for
+sPHENIX trackers will enable the recording of 500 times greater
+statistics of M.B. \pp collisions, which in turn will enable proper HF
+measurements in this key kinematic region.
 
 \subsection{Full streaming Readout in Run26}
  
 
 \subsection{Data Preservation and Data Mining}
 
-This upgrade will accumulate a large amount (200 billion) of minimal bias polarized \pp collision without a triggering-bias and with the full sPHENIX tracking capability. After RHIC completes its scientific mission at the end of the sPHENIX program, this would be a unique dataset allowing future data mining for novel quantum effects such as the quantum coherence in particle productions. These \pp data may be critical in understanding the future $e+p/A$ collision data at an EIC [?]. 
+This upgrade will accumulate a large amount (200 billion) of minimum
+bias polarized \pp collision without a trigger bias and with the full
+sPHENIX tracking capability. After RHIC completes its scientific
+mission at the end of the sPHENIX program, this would be a unique
+dataset allowing future data mining for novel quantum effects such as
+the quantum coherence in particle productions. These \pp data may be
+critical in understanding the future $e+p/A$ collision data at an
+EIC~\cite{something}.

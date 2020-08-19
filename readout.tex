@@ -1,7 +1,17 @@
 \chapter{Upgrades of the sPHENIX Readout}
 \label{chap:readout}
 
-In this Chapter we detail two very modest cost upgrades that will significantly enhance the sPHENIX physics program beyond the original proposal.     These both related to the data acquisition and readout.   The first is a continuous streaming readout of the tracking detectors (MVTX, INTT, TPC) and could be available at 10\% capacity for the 2024 running and at 100\% capacity if a future opportunity for running in 2026-2027 were available.   The second is to demultiplex the readout electronics for the calorimeter system which would enable a doubling of the Level-1 trigger date for these detectors from 15 kHz to 30 kHz.   This upgrade could be available for running in 2026-2027.   We detail these two options in the sections below.
+In this Chapter we detail two potential upgrades of the sPHENIX data
+acquisition and readout system of modest cost that would significantly
+enhance the original physics program.  The first is a streaming
+(rather than triggered) readout of the tracking detectors (MVTX, INTT,
+and TPC) which could be available at 10\% capacity for the 2024 run
+and at 100\% capacity for running in 2026--2027 should that
+opportunity arise.  The second is a demultiplexing of the readout
+electronics for the calorimeter system which would enable a doubling
+of the Level-1 trigger rate for these detectors from 15~kHz to 30~kHz.
+This upgrade could be available for running in 2026--2027.  We detail
+these two options in the sections below.
 
 \input{streaming_readout}
 
@@ -10,58 +20,74 @@ In this Chapter we detail two very modest cost upgrades that will significantly 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.75\linewidth]{figs/sphenixdaq_servers_20200803.pdf}
-    \caption{Block diagram of sPHENIX data acquisition system, showing interfaces to MVTX, INTT, and TPC front end electronics using the ATLAS FELIX interface, and electromagnetic and hadronic calorimeters and Minimum Bias Detector using the DCM2 and JSEB card.}
+    \includegraphics[width=0.85\linewidth]{figs/sphenixdaq_servers_20200803.pdf}
+    \caption{Block diagram of sPHENIX data acquisition system, showing
+      interfaces to MVTX, INTT, and TPC front end electronics using
+      the ATLAS FELIX interface, and electromagnetic and hadronic
+      calorimeters and Minimum Bias Detector using the DCM2 and JSEB
+      card.} 
     \label{fig:sphenixdaq_servers}
 \end{figure}
 
 The sPHENIX data acquisition system is designed to acquire events from
-front end electronics at 15 kHz and 90\% or greater livetime.
-Custom digitizers on the detector have been designed which transmit data over fiber optic cables to computers in the sPHENIX Rack Room which record data to local
-fileservers before copying to RACF for archiving and analysis.
-A block diagram of the system is shown in Figure \ref{fig:sphenixdaq_servers}.
-The system is designed with high speed links and buffering at several points to
-achieve the design livetime at 15 kHz event rate.
-In the absence of data flow bottlenecks, the livetime is limited by the
-ADC system used to read out the three calorimeters and the Minimum Bias Detector.
+the front end electronics at 15~kHz and a livetime of 90\% or greater.
+Custom digitizers on the detector have been designed to transmit data
+over fiber optic cables to computers in the sPHENIX Rack Room which
+record data to local fileservers before copying the data to the RACF
+for archiving and analysis.  A block diagram of the system is shown in
+Figure \ref{fig:sphenixdaq_servers}.  The system is designed with high
+speed links and buffering at several points to achieve the design
+livetime at a 15~kHz event rate.  In the absence of data flow
+bottlenecks, the livetime is limited by the ADC system used to read
+out the three calorimeters (EMCal, iHCal and oHCal) and the Minimum
+Bias Detector.
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.55\linewidth]{figs/sphenix_daqrate_3.pdf}
+    \includegraphics[trim = 0 0 0 25, clip,
+    width=0.75\linewidth]{figs/sphenix_daqrate_3.pdf} 
     \caption{Livetime as a function of trigger rate for calorimeter digitizers for
     1, 4, and 8 event buffering in the front end in the baseline design (black),
-    and with possible future upgrades (red).  For comparison, the green line shows the effect of single event buffering, or stop-and-read.}
+    and with possible future upgrades (red).  For comparison, the
+    green line shows the effect of single event buffering, or
+    stop-and-read.} 
     \label{fig:sphenix_daqrate}
 \end{figure}
 
-The ADC system used by the calorimeters uses 60 MHz waveform digitizers
-to record a fixed number of samples at the time of a Level 1 trigger, 
-which are buffered locally on the detector for 4, and possibly as many as 8,
-events before serialization and transmission over optical fiber from a digitizer "XMIT" board to
-second generation PHENIX Data Collection Modules (DCM2) which suppresses zeroes
-and formats the data.
-The sPHENIX baseline design collects data from 3 ADC modules  (192 channels) to one fiber (by way of the XMIT board), and the time to transmit an event ultimately determines the livetime as a function of event rate.
-Assuming there are no data transmission bottlenecks downstream 
-which would require throttling the data flow, the transmission time for a single
-event is designed to be about 40 $\mu$sec.  
-Buffering events at the digitizer makes it possible to achieve above 90\% livetime 
-with 15 kHz of input triggers, but the livetime decreases as the trigger
-rate approaches 25 kHz, as shown by the black curves in Figure \ref{fig:sphenix_daqrate}.
+The ADC system used by the calorimeters uses 60~MHz waveform
+digitizers to record a fixed number of samples at the time of a
+Level-1 trigger, which are buffered locally on the detector for 4, and
+possibly as many as 8, events before serialization and transmission
+over optical fiber from a digitizer "XMIT" board to second generation
+Data Collection Modules (DCM2) --- reused from the PHENIX experiment
+--- which suppress zeroes and format the data.  The sPHENIX baseline
+design collects data from three ADC modules (192 channels) to one
+fiber (by way of the XMIT board), and the time to transmit an event
+ultimately determines the livetime as a function of event rate.
+Assuming there are no data transmission bottlenecks downstream which
+would require throttling the data flow, the transmission time for a
+single event is designed to be about 40~$\mu$sec.  Buffering events at
+the digitizer makes it possible to achieve a livetime greater than
+90\% with 15~kHz of input triggers, but the livetime decreases as the
+trigger rate approaches 25~kHz, as shown by the black curves in Figure
+\ref{fig:sphenix_daqrate}.
 
-A possible upgrade to the ADC system which could nearly double
-the rate of recorded events while maintaining 90\% livetime would be to decrease the number ADC modules serialized on one fiber in the electromagnetic calorimeter.
-Reducing the number of ADC boards per fiber to two would not require more crates on the detector, and would decrease the transmission time to about 28 $\mu$sec, as 
-shown by the red curves in Figure \ref{fig:sphenix_daqrate}.
+A possible upgrade to the ADC system which could nearly double the
+rate of recorded events while maintaining the 90\% livetime would be
+to decrease the number ADC modules serialized on one fiber in the
+electromagnetic calorimeter.  Reducing the number of ADC boards per
+fiber to two would not require more crates on the detector, and would
+decrease the transmission time to about 28~$\mu$sec, as shown by the
+red curves in Figure \ref{fig:sphenix_daqrate}.
 
-This upgrade would require 64 additional XMIT boards and 8 additional DCM2 boards
-as well as some additional electronics, fibers, and crates to serve them.  
-A rough order of magnitude estimate of the cost is \$100k-\$150k in 
-electronics and a similar cost for engineering, for a total cost of about
-\$300k.
-Due to parts obsolescence and continuing advances in electronics, it could be
-preferable to design a replacement for the DCM2's, but it is not practical to 
-consider such a project until the baseline electronics is installed and operating.
-
+This upgrade would require 64 additional XMIT boards and eight
+additional DCM2 boards as well as some additional electronics, fibers,
+and crates to serve them.  A rough estimate of the cost is
+\$100k-\$150k in electronics and a similar cost for engineering, for a
+total cost of about \$300k.  Due to parts obsolescence and continuing
+advances in electronics, it could be preferable to design a
+replacement for the DCM2s, but it is not practical to consider such a
+project until the baseline electronics is installed and operating.
 
 %%%
 
