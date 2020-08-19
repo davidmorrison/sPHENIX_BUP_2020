@@ -11,8 +11,7 @@ In this Chapter we detail two very modest cost upgrades that will significantly 
 \begin{figure}
     \centering
     \includegraphics[width=0.75\linewidth]{figs/sphenixdaq_servers_20200803.pdf}
-    \caption{Block diagram of sPHENIX data acquisition system, showing interfaces to MVTX,
-    INTT, and TPC front electronics using the ATLAS FELIX interface, and electromagnetic and hadronic calorimeters and Minimum Bias Detector using the DCM2 and JSEB card.}
+    \caption{Block diagram of sPHENIX data acquisition system, showing interfaces to MVTX, INTT, and TPC front end electronics using the ATLAS FELIX interface, and electromagnetic and hadronic calorimeters and Minimum Bias Detector using the DCM2 and JSEB card.}
     \label{fig:sphenixdaq_servers}
 \end{figure}
 
@@ -31,7 +30,7 @@ ADC system used to read out the three calorimeters and the Minimum Bias Detector
     \includegraphics[width=0.55\linewidth]{figs/sphenix_daqrate_3.pdf}
     \caption{Livetime as a function of trigger rate for calorimeter digitizers for
     1, 4, and 8 event buffering in the front end in the baseline design (black),
-    and with possible future upgrades (red).}
+    and with possible future upgrades (red).  For comparison, the green line shows the effect of single event buffering, or stop-and-read.}
     \label{fig:sphenix_daqrate}
 \end{figure}
 
@@ -41,7 +40,7 @@ which are buffered locally on the detector for 4, and possibly as many as 8,
 events before serialization and transmission over optical fiber from a digitizer "XMIT" board to
 second generation PHENIX Data Collection Modules (DCM2) which suppresses zeroes
 and formats the data.
-The sPHENIX baseline design collects data from 3 ADC modules  (192 channels) to one fiber (by way of a board known as an XMIT), and the time to transmit an event ultimately determines the livetime as a function of event rate.
+The sPHENIX baseline design collects data from 3 ADC modules  (192 channels) to one fiber (by way of the XMIT board), and the time to transmit an event ultimately determines the livetime as a function of event rate.
 Assuming there are no data transmission bottlenecks downstream 
 which would require throttling the data flow, the transmission time for a single
 event is designed to be about 40 $\mu$sec.  
@@ -53,6 +52,16 @@ A possible upgrade to the ADC system which could nearly double
 the rate of recorded events while maintaining 90\% livetime would be to decrease the number ADC modules serialized on one fiber in the electromagnetic calorimeter.
 Reducing the number of ADC boards per fiber to two would not require more crates on the detector, and would decrease the transmission time to about 28 $\mu$sec, as 
 shown by the red curves in Figure \ref{fig:sphenix_daqrate}.
+
+This upgrade would require 64 additional XMIT boards and 8 additional DCM2 boards
+as well as some additional electronics, fibers, and crates to serve them.  
+A rough order of magnitude estimate of the cost is \$100k-\$150k in 
+electronics and a similar cost for engineering, for a total cost of about
+\$300k.
+Due to parts obsolescence and continuing advances in electronics, it could be
+preferable to design a replacement for the DCM2's, but it is not practical to 
+consider such a project until the baseline electronics is installed and operating.
+
 
 %%%
 
