@@ -1,21 +1,28 @@
 
 \section{Streaming Readout Upgrade for the sPHENIX trackers}
- 
-\subsection{Introduction}
 
-As proposed in Chapter~\ref{chap:beam_use_proposal}, the sPHENIX data taking will start with \auau collisions in 2023, followed \pp and \pau collisions in 2024. Many sPHENIX observables, such as photon and jets, leave clear signature in the calorimeter system that can be used to produce a level-1 trigger. However, further physics opportunities present in the non-triggerable data, such as the low \pt open heavy flavor hadrons that decay hadronically that leaves  relatively small signals in the
-calorimeters when compared with the underlying event. Therefore, they
-cannot be efficiently collected via calorimeter triggers, which have a
-hadron energy threshold of 10~GeV. In the 15~kHz sPHENIX trigger
-bandwidth, one would only reasonably request around few kHz of the
-minimum bias \pp trigger bandwidth for this new program. Assuming a
-vertex range selection purity of 50\%, a 1~kHz minimum bias trigger
-leads to recording $2\times10^{-4}$ of the delivered luminosity. This
-translates to rather limited statistics for these rare low-$p_T$ HF
-signals as quantified in Table~\ref{tab:HFppreach}.
+%As proposed in Chapter~\ref{chap:beam_use_proposal}, 
+The nominal sPHENIX data taking assumes calorimeter-based Level-1 triggers for \pp and \pau data taking.  Many sPHENIX observables, such as photons and jets, leave clear signatures in the calorimeter system that can be used to produce such a Level-1 trigger. However, further physics opportunities present only in the non-triggerable data stream. One example is low-\pt open heavy-flavor hadrons that decay hadronically and leave relatively small signals in the
+calorimeters when compared with the underlying event. 
+These physics channels cannot be efficiently collected via calorimeter triggers, which have too high an energy threshold.
+%hadron energy threshold on the order of 10~GeV. 
+In the sPHENIX trigger
+bandwidth, one would only reasonably allocate 1-5~kHz out of the 15~kHz for the
+minimum bias \pp or \pau trigger bandwidth for this type of program. 
+% Assuming a
+% vertex range selection purity of 50\%, a 1~kHz minimum bias trigger
+% leads to recording $2\times10^{-4}$ of the delivered luminosity. 
+This translates into rather limited statistics for these rare low-$p_T$ heavy-flavor
+signals as quantified in Table~\ref{tab:HFppreach}  (left columns).
 
-{\textcolor{red}{REMOVE TOO MANY SPECIFIC NUMBERS FROM HERE...}}
+The tracking detectors for the sPHENIX experiment all support streaming readout mode, that is where the digitization and readout of the data off the detector does not require Level-1 trigger information as shown in Figure~\ref{fig:TPC-DAQ-structure}. The currently envisioned nominal data taking mode is where the data acquisition selects the time-slice of the tracker data that  corresponds to the calorimeteric-triggered event and saves those time-slices to the output raw data file. 
+A streaming readout upgrade in the data acquisition (DAQ) firmware and software is being developed by the collaboration to record a tunable fraction of the tracker data stream on top of the calorimeteric-triggered events, which can vastly increase the fully recorded minimum biased collision event in the full tracking system~[{\textcolor{red}{SRO tech note}}]. 
 
+This hybrid trigger-streaming DAQ is particular efficient in the sense that the recorded events per unit volume of raw data is optimized.  By taking the approach of extending the tracker data recording time window immediately following a calorimeteric-triggered event and completing the partially recorded off-time collisions in the long integration time window of the MVTX and TPC detectors, one captures additional interactions most efficiently. 
+From an analysis point of view, this is an elegant solution as it avoids any trigger selection bias which would be quite complicated for rare and weak signals such as hadroincally decayed heavy-flavor hadrons.
+The working point of this upgrade can be quantified in the data column of the TPC as shown in Figure~\ref{fig:TPC-DAQ-rate}, where a 50\% increase in the data volume column allows for recording 10\% of {\bf all} minimum biased collisions, an increasing by two to three orders of magnitude as detailed in Table~\ref{tab:HFppreach} (right columns). 
+
+% {\textcolor{red}{(Embed something we want PAC to write in report)}} 
 % In the first three years of sPHENIX operation, the collaboration
 % envisions a run plan sampling 2 trillion \pp collisions (50~\pb) with
 % electron and jet triggers, as well as recording 140 billion M.B. \AuAu
@@ -26,11 +33,11 @@ signals as quantified in Table~\ref{tab:HFppreach}.
 % triggered DAQ cannot efficiently sample HF production below a $p_T$ of
 % 10~GeV$/c$.
  
-A study~[{\textcolor{red}{SRO tech note}}] found that the sPHENIX tracking detectors can
-be upgraded to record a large amount of \pp collisions via a streaming
-readout upgrade in the data acquisition (DAQ) firmware and software.
-{\textcolor{red}{(Embed something we want PAC to write in report)}} 
 
+% A detailed study~[{\textcolor{red}{SRO tech note}}] found that the sPHENIX tracking detectors can
+% have an upgraded readout mode to record a vast number of \pp collisions via a streaming
+% readout upgrade in the data acquisition (DAQ) firmware and software, which is further quantified in  Table~\ref{tab:HFppreach}.
+% {\textcolor{red}{(Embed something we want PAC to write in report)}} 
 
 
  
@@ -150,22 +157,16 @@ readout upgrade in the data acquisition (DAQ) firmware and software.
 
 
 
- 
- 
-\subsection{Hybrid Trigger-Streaming Readout in Run24}
- 
-
-
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=.7\linewidth]{figs/DAQ structure_rev3.pdf}
+\includegraphics[width=.8\linewidth]{figs/DAQ structure_rev3.pdf}
 \caption{The hybrid DAQ structure of the sPHENIX tracking detector, in which  all three tracking detectors are in streaming readout mode. The output of the tracker data stream are throttled to be in synchronize with calorimeter trigger. Additional tracker data can also be streaming to record more minimum bias collisions in addition to the calorimeteric triggered events.}
 \label{fig:TPC-DAQ-structure}
 \end{center}
 \end{figure}
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=.7\linewidth]{figs/TPCRateLayeredPP_Summary_13MHz_TriggerWindowRateCoverageCompile.pdf}
+\includegraphics[width=.8\linewidth]{figs/TPCRateLayeredPP_Summary_13MHz_TriggerWindowRateCoverageCompile.pdf}
 % \caption[hoice of operation point between the peak TPC data logging rate and
 %   the fraction of M.B. p+p collision recorded.]{\label{fig:TPCRateWindow}
 %   Choice of operation point between the peak TPC data logging rate and
@@ -177,36 +178,50 @@ readout upgrade in the data acquisition (DAQ) firmware and software.
 %   optimization strategies which would allow recording much higher
 %   statistics at a fixed logging rate as further discussed in the last
 %   Chapter X.}
-\caption{Choice of operation point between the peak TPC data logging rate and the fraction of M.B. p+p collision recorded. The green horizontal line denotes the peak data logging rate for Au+Au collisions. At similar logging rate, a minimum of 10\% of \pp M.B. collisions can be streamed to the raw data file as denoted by the solid cyan curve. In the case that a cross angle is introduced (dashed cyan curve) the overall data rate can be significantly reduced. Various online data reduction strategy could further reduce the data rate too as presented by the red and orange curves.}
+\caption{{\textcolor{red}{Update working point for final version}}. Choice of operation point between the peak TPC data logging rate and the fraction of M.B. p+p collision recorded. The green horizontal line denotes the peak data logging rate for Au+Au collisions. At similar logging rate, a minimum of 10\% of \pp M.B. collisions can be streamed to the raw data file as denoted by the solid cyan curve. In the case that a cross angle is introduced (dashed cyan curve) the overall data rate can be significantly reduced. Various online data reduction strategy could further reduce the data rate too as presented by the red and orange curves.}
 \label{fig:TPC-DAQ-rate}
 \end{center}
 \end{figure}
+
  
-The upgraded DAQ is illustrated in Figure~\ref{fig:TPC-DAQ-structure} and
-summarized in Table~\ref{tab:HFppreach}.  The FEE and DAQ hardware of
-each of the three tracking detectors supports a streaming readout mode
-and provides the capability needed for this upgrade. The main work
-will focus on DAQ firmware and software development that enabling the
-streaming capability.  This upgrade would enable the collection of
-sufficient minimum bias in \pp events.  That is, 10\% delivered
-luminosity (see next Chapter) or 200~billion events in the acceptance
-of the vertex tracker, which is a factor of 500 improvement. This
-dataset enables a comprehensive low-$p_T$ hadron program as discussed
-here.  The analysis of these HF hadronic channels does not require
-calorimeter information. Instead, they can be identified with the precision
-tracking detectors of sPHENIX (at $p_T=5$~GeV$/c$, $\sigma(p)/p=1\%$,
-$\sigma(DCA)<10$~$\mu$m ) via a combination of decay topology and
-invariant mass, as demonstrated for even the busiest events of Au+Au
-collisions through detailed simulation studies in~\cite{sPH-HF-2017-002}.
+ 
+\subsection{Hybrid Trigger-Streaming Readout in 2024}
+ 
+In the 2024 run, we plan to implement the first streaming readout DAQ for the tracking detectors to record 10\% of the delivered luminosity in additional to the calorimeteric-triggered events. The data rate and data volume is dominated by the time projection chamber which is studied in Figure~\ref{fig:TPC-DAQ-rate}. With the introduction of the beam crossing angle, the expected data rate with the 10\% streaming readout would be much lower than the design specifications and the previous data volume estimates with zero crossing angle assumed in the 2019 sPHENIX computing plan~\cite{sPH-COMP-2019-001}. The reason is simply because with the 2 milliradian crossing angle there are far fewer collisions outside of $|z|<10$~cm that would have still caused hits in the TPC that would have been recorded.
 
-As summarized in Table~\ref{tab:HFppreach}, an upgraded DAQ for
-sPHENIX trackers will enable the recording of 500 times greater
-statistics of M.B. \pp collisions, which in turn will enable proper HF
-measurements in this key kinematic region.
+The physics gain is significant, that includes the \pp reference data for the $D^0$ \raa and the $\Lambda_c/D^0$ ratio both of which are critical for the systematic control in understanding the \AuAu data as discussed in Section~\ref{sec:HF}. In addition, since the \pp beam is transversely polarized, the single spin asymmetry in the $D^0$ channel can be measured to gain access of tri-gluon correlation~\cite{Kang:2008ih, Koike:2011mb}, which is further discussed in Section~\ref{sec:ColdQCD}. 
+All aforementioned physics gains would be first measurements at RHIC and uniquely enabled by the streaming DAQ of the sPHENIX trackers.
 
-\subsection{Full streaming Readout in Run26}
 
-[Readout everything in tracker]
+ 
+% The upgraded DAQ for the Run2024 \pp and \pA streaming data taking 
+% is illustrated in Figure~\ref{fig:TPC-DAQ-structure} and
+% summarized in Table~\ref{tab:HFppreach}.  
+% The FEE and DAQ hardware of
+% each of the three tracking detectors supports a streaming readout mode
+% and provides the capability needed for this upgrade. The main work
+% will focus on DAQ firmware and software development that enabling the
+% streaming capability.  This upgrade would enable the collection of
+% sufficient minimum bias in \pp events.  That is, 10\% delivered
+% luminosity (see next Chapter) or 200~billion events in the acceptance
+% of the vertex tracker, which is a factor of 500 improvement. This
+% dataset enables a comprehensive low-$p_T$ hadron program as discussed
+% here.  The analysis of these HF hadronic channels does not require
+% calorimeter information. Instead, they can be identified with the precision
+% tracking detectors of sPHENIX (at $p_T=5$~GeV$/c$, $\sigma(p)/p=1\%$,
+% $\sigma(DCA)<10$~$\mu$m ) via a combination of decay topology and
+% invariant mass, as demonstrated for even the busiest events of Au+Au
+% collisions through detailed simulation studies in~\cite{sPH-HF-2017-002}.
+
+% As summarized in Table~\ref{tab:HFppreach}, an upgraded DAQ for
+% sPHENIX trackers will enable the recording of 500 times greater
+% statistics of M.B. \pp collisions, which in turn will enable proper HF
+% measurements in this key kinematic region.
+
+
+\subsection{Full streaming Readout for Potential 2026-2027 Running}
+
+In the potential running in 2026 to 2027, we plan to build on the initial experience with streaming readout and aim for stream recording 100\% data stream for the sPHENIX tracking detectors for all collision species. As shown in Figure~\ref{fig:TPC-DAQ-rate}, the data rate would be significantly higher compared the the 2024 work point, but would still be below the bandwidth limit of the readout system. At the expense of higher data volume, full streaming readout of the tracker allows another order of magnitude improvement in the recorded \pp and \pA collision, whose impact is further quantified in Chapter~\ref{chap:beam_use_proposal_extra}.
 
 \subsection{Data Preservation and Data Mining}
 
@@ -216,6 +231,8 @@ bias polarized \pp collision without a trigger bias and with the full
 sPHENIX tracking capability. After RHIC completes its scientific
 mission at the end of the sPHENIX program, this would be a unique
 dataset allowing future data mining for novel quantum effects such as
-the quantum coherence in particle productions. These \pp data may be
-critical in understanding the future $e+p/A$ collision data at an
-EIC~\cite{Accardi2012}.
+the quantum coherence in particle productions. 
+Such future analysis would have full freedom to define an ``event'' in the offline software ``trigger'' that is based on high level objects such as tracklets and final detector alignment and calibrations. 
+These \pp data may be
+critical for understanding the future $e+p/A$ collision data at an
+Electron Ion Collider~\cite{Accardi2012}.
