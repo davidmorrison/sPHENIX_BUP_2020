@@ -16,10 +16,10 @@ This translates into rather limited statistics for these rare low-$p_T$ heavy-fl
 signals as quantified in Table~\ref{tab:HFppreach}  (left columns).
 
 The tracking detectors for the sPHENIX experiment all support streaming readout mode, that is where the digitization and readout of the data off the detector does not require Level-1 trigger information as shown in Figure~\ref{fig:TPC-DAQ-structure}. The currently envisioned nominal data taking mode is where the data acquisition selects the time-slice of the tracker data that  corresponds to the calorimeteric-triggered event and saves those time-slices to the output raw data file. 
-A streaming readout upgrade in the data acquisition (DAQ) firmware and software is being developed by the collaboration to record a tunable fraction of the tracker data stream on top of the calorimeteric-triggered events, which can vastly increase the fully recorded minimum biased collision event in the full tracking system~[{\textcolor{red}{SRO tech note}}]. 
+A streaming readout upgrade in the data acquisition (DAQ) firmware and software is being developed by the collaboration to record a tunable fraction of the tracker data stream on top of the calorimeteric-triggered events, which can vastly increase the fully recorded minimum bias collision event in the full tracking system. 
 
 This hybrid trigger-streaming DAQ is particular efficient in the sense that the recorded events per unit volume of raw data is optimized.  By taking the approach of extending the tracker data recording time window immediately following a calorimeteric-triggered event and completing the partially recorded off-time collisions in the long integration time window of the MVTX and TPC detectors, one captures additional interactions most efficiently. 
-From an analysis point of view, this is an elegant solution as it avoids any trigger selection bias which would be quite complicated for rare and weak signals such as hadroincally decayed heavy-flavor hadrons.
+From an analysis point of view, this is an elegant solution as it avoids any trigger selection bias which would be quite complicated for rare and weak signals such as hadronically decayed heavy-flavor hadrons.
 The working point of this upgrade can be quantified in the data column of the TPC as shown in Figure~\ref{fig:TPC-DAQ-rate}, where a 50\% increase in the data volume column allows for recording 10\% of {\bf all} minimum biased collisions, an increasing by two to three orders of magnitude as detailed in Table~\ref{tab:HFppreach} (right columns). 
 
 % {\textcolor{red}{(Embed something we want PAC to write in report)}} 
@@ -61,26 +61,26 @@ The working point of this upgrade can be quantified in the data column of the TP
          & Year-2, 0-crossing  
          & Year-2, 2mrad-crossing  
          & Year-2, 
-         & Year-2 and 4  \\ 
+         & Year-4  \\ 
          & 
          & in current setup  
          & in current setup  
          & w/ str. tracker
          & w/ str. tracker \\            
          & 
-         & Per-5kHz M.B. trigger 
-         & per-5kHz M.B. trigger 
+         & Per-1kHz M.B. trigger 
+         & per-1kHz M.B. trigger 
          & 
          &  \\ \hline \hline
 
         M.B.  & Data  
         & Each 1k Hz M.B.  
-        & Each 5k Hz M.B.  
+        & Each 1k Hz M.B.  
         & 10\% M.B. events 
-        & 10\% M.B. events \\ 
+        & 100\% M.B. events \\ 
         p+p & Mode 
         & trigger w/ $2\times10^{-4}$ 
-        & trigger w/ $2\times10^{-4}$  
+        & trigger w/ $5\times10^{-4}$  
         & str. recorded
         & str. recorded \\ 
          &  
@@ -90,22 +90,22 @@ The working point of this upgrade can be quantified in the data column of the TP
         & \\ \hline
        
          & Stats 
-        & 0.4 Billion M.B. evts 
-        & 13 Billion M.B. evts  
-        & 200 Billion M.B. evts
-        & 800 Billion M.B. evts \\ 
+        & 0.8 Billion M.B. evts 
+        & 2 Billion M.B. evts  
+        & 400 Billion M.B. evts
+        & 5.2 Trillion M.B. evts \\ 
          &  
-        & 0.01~\pb recorded 
-        & 0.15~\pb recorded 
-        & 5.0~\pb recorded
-        & 20.0~\pb recorded \\ \hline  
+        & 0.02~\pb recorded 
+        & 0.05~\pb recorded 
+        & 10.0~\pb recorded
+        & 130.0~\pb recorded \\ \hline  
         
         Physics  
         & B $\rightarrow$ D$^{0}$ $\rightarrow$ $\pi$K 
-        & 250 evts  
-        & 3800 evts
-        & 120k evts 
-        & 500k evts \\ 
+        & 500 evts  
+        & 1.2k evts
+        & 240k evts 
+        & 3M evts \\ 
         Reach &  R$_{AA}$ ref.
         &   
         &  
@@ -114,10 +114,10 @@ The working point of this upgrade can be quantified in the data column of the TP
 
         & 
         D$^{0} \rightarrow$ $\pi$K pair
-        & 250 evts  
-        & 3800 evts
-        & 120k evts 
-        & 500k evts \\ 
+        & 500 evts  
+        & 1.2k evts
+        & 240k evts 
+        & 3M evts \\ 
          &  Diffusion of c+$\overline{c}$
         &   
         &  
@@ -126,10 +126,10 @@ The working point of this upgrade can be quantified in the data column of the TP
  
          & 
         $\Lambda_{c} \rightarrow$ $\pi$K$p$ 
-        & 500 evts  
-        & 8k evts
-        & 250k evts 
-        & 1M evts \\ 
+        & 1000 evts  
+        & 2.5k evts
+        & 500k evts 
+        & 6.5M evts \\ 
          &  Charm hadronization
         &   
         &  
@@ -138,10 +138,10 @@ The working point of this upgrade can be quantified in the data column of the TP
         
         &
         Prompt D$^{0} \rightarrow$ $\pi$K  
-        & 75k evts  
-        & 1.1M evts
-        & 40M evts 
-        & 150M evts \\ 
+        & 160k evts  
+        & 0.4M evts
+        & 80M evts 
+        & 1B evts \\ 
          & Tri-Gluon Corr. via SSA 
         &   
         &  
@@ -149,7 +149,7 @@ The working point of this upgrade can be quantified in the data column of the TP
         &  \\ \hline 
         
     \end{tabular}
-    \caption{Statistical reach for Heavy Flavor \pp measurements by channel in different data taking periods and modes, including streaming readout of the tracker.}
+    \caption{{\textcolor{red}{Number need double check}}Statistical reach for Heavy Flavor \pp measurements by channel in different data taking periods and modes, including streaming readout of the tracker.}
     \label{tab:HFppreach}
 \end{sidewaystable}
  
@@ -166,7 +166,7 @@ The working point of this upgrade can be quantified in the data column of the TP
 \end{figure}
 \begin{figure}[htbp]
 \begin{center}
-\includegraphics[width=.8\linewidth]{figs/TPCRateLayeredPP_Summary_13MHz_TriggerWindowRateCoverageCompile.pdf}
+\includegraphics[width=.8\linewidth]{figs/TPCRateLayeredPP_BUP2020_Summary_TriggerWindowRateCoverageCompile.pdf}
 % \caption[hoice of operation point between the peak TPC data logging rate and
 %   the fraction of M.B. p+p collision recorded.]{\label{fig:TPCRateWindow}
 %   Choice of operation point between the peak TPC data logging rate and
@@ -178,7 +178,7 @@ The working point of this upgrade can be quantified in the data column of the TP
 %   optimization strategies which would allow recording much higher
 %   statistics at a fixed logging rate as further discussed in the last
 %   Chapter X.}
-\caption{{\textcolor{red}{Update working point for final version}}. Choice of operation point between the peak TPC data logging rate and the fraction of M.B. p+p collision recorded. The green horizontal line denotes the peak data logging rate for Au+Au collisions. At similar logging rate, a minimum of 10\% of \pp M.B. collisions can be streamed to the raw data file as denoted by the solid cyan curve. In the case that a cross angle is introduced (dashed cyan curve) the overall data rate can be significantly reduced. Various online data reduction strategy could further reduce the data rate too as presented by the red and orange curves.}
+\caption{Choice of operation point between the peak TPC data logging rate and the fraction of M.B. p+p collision recorded. The green horizontal line denotes the peak data logging rate for Au+Au collisions. At similar logging rate and without the beam crossing angle, a minimum of 10--20\% of \pp M.B. collisions can be streamed to the raw data file as denoted by the solid blue curve. In the case that a beam cross angle is introduced (red, orange and green curves) the overall data rate can be significantly reduced. The default work point in the 2024 run is with 2~mrad beam crossing angle and record 10\% of collisions at 62 Gbps data rate as denoted by the diamond point.}
 \label{fig:TPC-DAQ-rate}
 \end{center}
 \end{figure}
@@ -187,7 +187,7 @@ The working point of this upgrade can be quantified in the data column of the TP
  
 \subsection{Hybrid Trigger-Streaming Readout in 2024}
  
-In the 2024 run, we plan to implement the first streaming readout DAQ for the tracking detectors to record 10\% of the delivered luminosity in additional to the calorimeteric-triggered events. The data rate and data volume is dominated by the time projection chamber which is studied in Figure~\ref{fig:TPC-DAQ-rate}. With the introduction of the beam crossing angle, the expected data rate with the 10\% streaming readout would be much lower than the design specifications and the previous data volume estimates with zero crossing angle assumed in the 2019 sPHENIX computing plan~\cite{sPH-COMP-2019-001}. The reason is simply because with the 2 milliradian crossing angle there are far fewer collisions outside of $|z|<10$~cm that would have still caused hits in the TPC that would have been recorded.
+In the 2024 run, we plan to implement the first streaming readout DAQ for the tracking detectors to record 10\% of the delivered luminosity in addition to the calorimeteric-triggered events. The data rate and data volume is dominated by the time projection chamber which is studied in Figure~\ref{fig:TPC-DAQ-rate}. With the introduction of the beam crossing angle, the expected data rate with the 10\% streaming readout would be much lower than the design specifications and the previous data volume estimates with zero crossing angle assumed in the 2019 sPHENIX computing plan~\cite{sPH-COMP-2019-001}. The reason is simply because with the 2 milliradian crossing angle there are far fewer collisions outside of $|z|<10$~cm that would have still caused hits in the TPC that would have been recorded.
 
 The physics gain is significant, that includes the \pp reference data for the $D^0$ \raa and the $\Lambda_c/D^0$ ratio both of which are critical for the systematic control in understanding the \AuAu data as discussed in Section~\ref{sec:HF}. In addition, since the \pp beam is transversely polarized, the single spin asymmetry in the $D^0$ channel can be measured to gain access of tri-gluon correlation~\cite{Kang:2008ih, Koike:2011mb}, which is further discussed in Section~\ref{sec:ColdQCD}. 
 All aforementioned physics gains would be first measurements at RHIC and uniquely enabled by the streaming DAQ of the sPHENIX trackers.
@@ -228,9 +228,9 @@ In the potential running in 2026 to 2027, we plan to build on the initial experi
 This upgrade will accumulate a large amount (10-100\% of delivered luminosity) 
 of minimum
 bias polarized \pp collision without a trigger bias and with the full
-sPHENIX tracking capability. After RHIC completes its scientific
-mission at the end of the sPHENIX program, this would be a unique
-dataset allowing future data mining for novel quantum effects such as
+sPHENIX tracking capability and preserved at RHIC computing facility. 
+After RHIC completes its scientific
+mission at the end of the sPHENIX program, this unique dataset would  allow future data mining for novel quantum effects such as
 the quantum coherence in particle productions. 
 Such future analysis would have full freedom to define an ``event'' in the offline software ``trigger'' that is based on high level objects such as tracklets and final detector alignment and calibrations. 
 These \pp data may be
