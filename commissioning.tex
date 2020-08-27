@@ -7,39 +7,32 @@ data.  The sPHENIX project and collaboration teams have taken this
 task seriously with detailed input from the detector subsystems and
 the sPHENIX Physics Working Groups.  
 
-We highlight that every running period with a new collision species requires specific commissioning, specifically in terms of safely bringing the beams to full intensity, setting up the beam crossing angle, timing in the detectors, and setting up the Level-1 triggers.    However, the very first running of the detector in 2023 requires significant additional commissioning time for each subsystem and confirming full detector performance specifications are being met.   Therefore we provide in more detail a dedicated week-by-week plan for detector commissioning in the 2023 \auau run below in Section~\ref{sec:auaucomm}.    Commissioning in the 2024 \pp and \pau running is built into the ramp up during physics data taking weeks.   We also note that having the option of some \pp running in 2023 would be beneficial in terms of understanding the \auau data itself as well as being well prepared for the only long \pp running taking place in 2024.   This option is not part of our default request and we detail con
-
-
-Say something about commissioning in each run!!!!
-
-We detail the initial
-commissioning plan and timeline for 2023 in this Chapter.   
+We highlight that every running period with a new collision species requires specific commissioning, particularly in terms of safely bringing the beams to full intensity, setting up the beam crossing angle, timing in the detectors, and setting up the Level-1 triggers.    However, the very first running of the detector in 2023 requires significant additional commissioning time for each subsystem and for confirming full detector performance specifications are being met.   Therefore we provide a dedicated week-by-week plan for detector commissioning in the 2023 \auau run in Section~\ref{sec:auaucomm}.    Commissioning in the 2024 \pp and \pau running is built into the ramp up during physics data taking weeks.   We also note that having the option of some \pp running in 2023 would be beneficial in terms of understanding the \auau data itself as well as being more prepared for the only long \pp running taking place in 2024.   This option is not part of our default request and we detail conditions for said running in Section~\ref{sec:year1pp}.
 
 \section{2023 \auau Commissioning Timeline}
 \label{sec:auaucomm}
 
-\renewcommand{\arraystretch}{1.9}
-\addtolength{\tabcolsep}{-0.5pt}
 \begin{table}[]
-  \caption{\label{tab:commision}Timeline for sPHENIX commissioning
-    period in 2023, the first year of operation.}
     \centering
-    \begin{tabular}{S[table-format=2.1]|l} \toprule
-        {Weeks} &  Details \\ \midrule
+    \begin{tabular}{|c|l|} \hline        
+    Weeks &  Details \\ \hline
         1.5 & low rate, 6 bunches \\ 
         2.0 & low rate, 111 bunches, MBD L1 timing \\ 
         1.0 & low rate, crossing angle checks \\ 
         1.0 & low rate, calorimeter timing \\ 
         4.0 & medium rate, TPC timing, optimization \\
-        2.0 & full rate, system test, DAQ throughput \\ \bottomrule
-        11.5 & {\bf total}
+        2.0 & full rate, system test, DAQ throughput \\ \hline
+        11.5 & {\bf total} \\ \hline
     \end{tabular}
+    \caption{Timeline for sPHENIX commissioning
+    period in 2023, the first year of operation.}
+    \label{tab:commision}
 \end{table}
 
 Commissioning sPHENIX with beams in RHIC should progress in stages
 with gradually increasing luminosity.  \auau collisions are necessary
-for commissioning due to the high multiplicities which can be used to
-assess the detector performance with larger occupancy.  We note that
+for commissioning of the detector under high multiplicities conditions.
+We note that
 installation of the sPHENIX inner silicon detectors takes 2--3 weeks
 and thus these sensitive detectors will be installed ahead of the 2023
 running period for system debugging and cosmic ray data taking.  The
@@ -54,11 +47,11 @@ Table~\ref{tab:commision}.
 %\section{Commissioning Period Details}
 
 For the purposes of this Beam Use Proposal, we include a very brief
-summary of the timeline as given.  Except for initial stores with six
+summary of considerations behind the timeline as given.  Except for initial stores with six
 bunches, operation with the maximum number of bunches (111) is
 preferable to reducing luminosity by reducing the number of filled
-bunches because it allows sPHENIX to commission as it plans to run.
-Initial stores should be zero crossing angle, both to begin operations
+bunches, because it allows sPHENIX to commission as it plans to run.
+Initial stores should be at zero crossing angle, both to begin operations
 with stores less likely to be lost as well as to provide a direct
 comparison of vertex distribution between crossing angles of zero and
 the nominal 2 milliradians.
@@ -73,11 +66,11 @@ planned for physics operation.
 \item Initial studies will require 1.5 weeks of stores with six
   bunches, zero crossing angle, and a collision rate of up to 2~kHz.
   These collisions will be used for an initial tune-up of timing and
-  the MBD trigger.  A simple ''blue logic'' trigger may be used
-  initially for timing.  Several days may be required before we can
-  fully operate the detector to provide time for use of diagnostic
-  instrumentation and to process data, but the stores can be kept in
-  RHIC as long as practical.
+  the MBD trigger.  A simple ''blue logic'' trigger, i.e. with standard NIM modules, may be used
+  initially for timing.  Several days will be required before we can
+  fully operate the detector and time is needed for diagnostic
+  instrumentation and processing of data.   During this period the stores can be kept in
+  RHIC as long as is practical.
 
 \item The next period will consist of two weeks of stores with 111
   bunches, zero crossing angle, and a collision rate of 1--5~kHz.
@@ -109,7 +102,7 @@ planned for physics operation.
   These stores will be used for initial operation of the tracking
   detectors, beginning with the TPC.  The minimum bias trigger,
   developed in the previous weeks, will be used to trigger the
-  detector.  It may be useful during this phase to operate with zero
+  detector readout.  It may be useful during this phase to operate with zero
   magnetic field and/or very low luminosity for periods of time in
   order to collect data which can be used to align the tracking
   detectors and characterize track distortions.  Some additional time
@@ -125,14 +118,14 @@ planned for physics operation.
 \end{itemize}
 
 At the end of this 11.5 week commissioning plan, the detector should be
-ready to take data from all detectors, triggered according to plan for
+ready to take data with all sub-systems, triggered according to plan for
 \auau, at the design rate of the data acquisition system.  Of course,
 producing data of publication quality requires more analysis than can
 be brought to bear while the collaboration is commissioning the
 apparatus, so it is crucial to develop monitoring software which
 allows us to quickly assess the quality of data as we take it.  We
 note that such commissioning time always has a significant uncertainty,
-and run time flexibility in this first year of running will be
+and run time flexibility in this first year will be
 required.
 
 Additional trigger specific commissioning time is needed for each new
