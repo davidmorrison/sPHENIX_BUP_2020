@@ -2,25 +2,46 @@
 \section{Streaming Readout Upgrade for the sPHENIX trackers}
 
 %As proposed in Chapter~\ref{chap:beam_use_proposal}, 
-The nominal sPHENIX data taking assumes calorimeter-based Level-1 triggers for \pp and \pau data taking.  Many sPHENIX observables, such as photons and jets, leave clear signatures in the calorimeter system that can be used to produce such a Level-1 trigger. However, further physics opportunities present only in the non-triggerable data stream. One example is low-\pt open heavy-flavor hadrons that decay hadronically and leave relatively small signals in the
-calorimeters when compared with the underlying event. 
-These physics channels cannot be efficiently collected via calorimeter triggers, which have too high an energy threshold.
-%hadron energy threshold on the order of 10~GeV. 
-In the sPHENIX trigger
-bandwidth, one would only reasonably allocate 1-5~kHz out of the 15~kHz for the
-minimum bias \pp or \pau trigger bandwidth for this type of program. 
-% Assuming a
-% vertex range selection purity of 50\%, a 1~kHz minimum bias trigger
-% leads to recording $2\times10^{-4}$ of the delivered luminosity. 
-This translates into rather limited statistics for these rare low-$p_T$ heavy-flavor
-signals as quantified in Table~\ref{tab:HFppreach}  (left columns).
+The nominal sPHENIX DAQ model assumes calorimeter-based Level-1
+triggers for \pp and \pau data taking.  Many sPHENIX observables, such
+as photons and jets, leave clear signatures in the calorimeter system
+that can be used to produce a sufficiently selective Level-1 trigger.
+However, further physics opportunities are present only in the
+non-triggerable data stream.  One example is low-\pt open heavy-flavor
+hadrons that decay hadronically and leave relatively small signals in
+the calorimeters compared to the background coming from the underlying
+event.  These physics channels cannot be efficiently collected via
+calorimeter triggers, which have too high an energy threshold.
+% hadron energy threshold on the order of 10~GeV.
+One would likely allocate 1-5~kHz of the full 15~kHz of the sPHENIX
+trigger bandwidth for this type of program in minimum bias \pp or
+\pau.
+
+% Assuming a vertex range selection purity of 50\%, a 1~kHz minimum
+% bias trigger leads to recording $2\times10^{-4}$ of the delivered
+% luminosity.
+This translates into rather limited statistics for these rare
+low-$p_T$ heavy-flavor signals as quantified in
+Table~\ref{tab:HFppreach} (left columns).
 
 The tracking detectors for the sPHENIX experiment all support streaming readout mode, that is where the digitization and readout of the data off the detector does not require Level-1 trigger information as shown in Figure~\ref{fig:TPC-DAQ-structure}. The currently envisioned nominal data taking mode is where the data acquisition selects the time-slice of the tracker data that  corresponds to the calorimeteric-triggered event and saves those time-slices to the output raw data file. 
 A streaming readout upgrade in the data acquisition (DAQ) firmware and software is being developed by the collaboration to record a tunable fraction of the tracker data stream on top of the calorimeteric-triggered events, which can vastly increase the fully recorded minimum bias collision event in the full tracking system. 
 
-This hybrid trigger-streaming DAQ is particular efficient in the sense that the recorded events per unit volume of raw data is optimized.  By taking the approach of extending the tracker data recording time window immediately following a calorimeteric-triggered event and completing the partially recorded off-time collisions in the long integration time window of the MVTX and TPC detectors, one captures additional interactions most efficiently. 
-From an analysis point of view, this is an elegant solution as it avoids any trigger selection bias which would be quite complicated for rare and weak signals such as hadronically decayed heavy-flavor hadrons.
-The working point of this upgrade can be quantified in the data column of the TPC as shown in Figure~\ref{fig:TPC-DAQ-rate}, where a 50\% increase in the data volume column allows for recording 10\% of {\bf all} minimum biased collisions, an increasing by two to three orders of magnitude as detailed in Table~\ref{tab:HFppreach} (right columns). 
+This hybrid trigger-streaming DAQ is particularly efficient in the
+sense that the number of recorded events per gigabyte of raw data is
+optimized.  By extending the tracker data recording time window
+immediately following a calorimeteric-triggered event and completing
+the partially recorded off-time collisions in the long integration
+time window of the MVTX and TPC detectors, one captures additional
+interactions most efficiently.  From an analysis point of view, this
+is an elegant solution as it avoids any trigger selection bias which
+would be quite complicated for rare and weak signals such as
+hadronically decayed heavy-flavor hadrons.  The working point of this
+upgrade can be quantified in the data column of the TPC as shown in
+Figure~\ref{fig:TPC-DAQ-rate}, where a 50\% increase in the data
+volume column allows for recording 10\% of {\bf all} minimum biased
+collisions, an increasing by two to three orders of magnitude as
+detailed in Table~\ref{tab:HFppreach} (right columns).
 
 % {\textcolor{red}{(Embed something we want PAC to write in report)}} 
 % In the first three years of sPHENIX operation, the collaboration
@@ -149,18 +170,23 @@ The working point of this upgrade can be quantified in the data column of the TP
         &  \\ \hline 
         
     \end{tabular}
-    \caption{{\textcolor{red}{Number need update with the new pp projection}}Statistical reach for Heavy Flavor \pp measurements by channel in different data taking periods and modes, including streaming readout of the tracker.}
+    \caption{{\textcolor{red}{Number need update with the new pp
+          projection}}Statistical reach for Heavy Flavor \pp
+      measurements by channel in different data taking periods and
+      modes, including streaming readout of the tracker.}
     \label{tab:HFppreach}
 \end{sidewaystable}
  
 
-
-
-
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=.8\linewidth]{figs/DAQ structure_rev3.pdf}
-\caption{The hybrid DAQ structure of the sPHENIX tracking detector, in which  all three tracking detectors are in streaming readout mode. The output of the tracker data stream are throttled to be in synchronize with calorimeter trigger. Additional tracker data can also be streaming to record more minimum bias collisions in addition to the calorimeteric triggered events.}
+\caption{The hybrid DAQ structure of the sPHENIX tracking detectors,
+  in which all three detectors are read out in a streaming mode. The
+  output of the tracker data streams are throttled appropriately to be
+  in synchrony with calorimeter triggers. Additional tracker data can
+  also be streamed, providing an opportunity to record minimum bias
+  collisions beyond those coming from calorimeter-triggered events.}
 \label{fig:TPC-DAQ-structure}
 \end{center}
 \end{figure}
