@@ -47,12 +47,12 @@ time window of the MVTX and TPC detectors, one captures additional
 interactions most efficiently.  From an analysis point of view, this
 is an elegant solution as it avoids any trigger selection bias which
 would be quite complicated for rare and weak signals such as
-hadronically decayed heavy-flavor hadrons.  The working point of this
-upgrade can be quantified in the data column of the TPC as shown in
-Figure~\ref{fig:TPC-DAQ-rate}, where a 50\% increase in the data
-volume column allows for recording 10\% of {\bf all} minimum biased
-collisions, an increasing by two to three orders of magnitude as
-detailed in Table~\ref{tab:HFppreach} (right columns).
+hadronically decayed heavy-flavor hadrons.  The effect of this upgrade
+can be quantified as shown in Figure~\ref{fig:TPC-DAQ-rate}, where a
+50\% increase in the data volume column allows for recording 10\% of
+{\bf all} minimum biased collisions, an increase by two to three
+orders of magnitude as detailed in Table~\ref{tab:HFppreach} (right
+columns).
 
 % {\textcolor{red}{(Embed something we want PAC to write in report)}} 
 % In the first three years of sPHENIX operation, the collaboration
@@ -256,20 +256,33 @@ All aforementioned physics gains would be first measurements at RHIC and uniquel
 % measurements in this key kinematic region.
 
 
-\subsection{Full streaming Readout for Potential 2026-2027 Running}
+\subsection{Full streaming Readout for Potential 2026--2027 Running}
 
-In the potential running in 2026 to 2027, we plan to build on the initial experience with streaming readout and aim for stream recording 100\% data stream for the sPHENIX tracking detectors for all collision species. As shown in Figure~\ref{fig:TPC-DAQ-rate}, the data rate would be significantly higher compared the the 2024 work point, but would still be below the bandwidth limit of the readout system. At the expense of higher data volume, full streaming readout of the tracker allows another order of magnitude improvement in the recorded \pp and \pA collision, whose impact is further quantified in Chapter~\ref{chap:beam_use_proposal_extra}.
+If RHIC runs in 2026 and/or 2027 become available, we would augment
+the initial DAQ to be able to stream \emph{all} of the data from the
+sPHENIX tracking detectors for \emph{all} collision species.  The
+curves in Figure~\ref{fig:TPC-DAQ-rate} show that as the fraction of
+streaming data is increase, the TPC data rate increases, and a fully
+streamed DAQ would have imply a data rate wsignificantly higher than
+the 2024 working point, shown as a black diamond in the figure.
+However, assuming even a small beam crossing angle, this data rate
+would still be below the 300~Gbps bandwidth limit of the full readout
+system neotiated with the RHIC computing facility.  At the expense of
+a somewhat higher data volume, a full streaming readout of the
+trackers allows another order of magnitude improvement in the recorded
+\pp and \pA statistics, whose impact is further quantified in
+Chapter~\ref{chap:beam_use_proposal_extra}.
 
 \subsection{Data Preservation and Data Mining}
 
-This upgrade will accumulate a large amount (10-100\% of delivered luminosity) 
-of minimum
-bias polarized \pp collision without a trigger bias and with the full
-sPHENIX tracking capability and preserved at RHIC computing facility. 
-After RHIC completes its scientific
-mission at the end of the sPHENIX program, this unique dataset would  allow future data mining for novel quantum effects such as
-the quantum coherence in particle productions. 
-Such future analysis would have full freedom to define an ``event'' in the offline software ``trigger'' that is based on high level objects such as tracklets and final detector alignment and calibrations. 
-These \pp data may be
-critical for understanding the future $e+p/A$ collision data at an
-Electron Ion Collider~\cite{Accardi2012}.
+This upgrade will accumulate a large amount (10--100\% of delivered
+luminosity) of minimum bias polarized \pp data without a trigger bias
+and with the full sPHENIX tracking capability.  Asr RHIC completes its
+scientific mission at the end of the sPHENIX program, this unique
+dataset would allow future data mining for novel quantum effects such
+as quantum coherence in particle production.  Such future analyses
+would have the full freedom to define an ``event'' in the offline
+software ``trigger'' that is based on high level objects such as
+tracklets and final detector alignment and calibrations.  These \pp
+data may be critical for fully understanding the future \eA collision
+data at the Electron Ion Collider~\cite{Accardi2012}.

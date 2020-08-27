@@ -30,7 +30,7 @@ these two options in the sections below.
 \end{figure}
 
 The sPHENIX data acquisition system is designed to acquire events from
-the front end electronics at 15~kHz and a livetime of 90\% or greater.
+the front end electronics at 15~kHz with a livetime of 90\% or greater.
 Custom digitizers on the detector have been designed to transmit data
 over fiber optic cables to computers in the sPHENIX Rack Room which
 record data to local fileservers before copying the data to the RACF
@@ -77,17 +77,19 @@ rate of recorded events while maintaining the 90\% livetime would be
 to decrease the number ADC modules serialized on one fiber in the
 electromagnetic calorimeter.  Reducing the number of ADC boards per
 fiber to two would not require more crates on the detector, and would
-decrease the transmission time to about 28~$\mu$sec, as shown by the
-red curves in Figure \ref{fig:sphenix_daqrate}.
+decrease the transmission time to about 28~$\mu$sec.  The pronounced
+effect of this \emph{de-multiplexing} is shown by the red curves in
+Figure \ref{fig:sphenix_daqrate}.
 
 This upgrade would require 64 additional XMIT boards and eight
-additional DCM II boards as well as some additional electronics, fibers,
-and crates to serve them.  A rough estimate of the cost is
-\$100k-\$150k in electronics and a similar cost for engineering, for a
+additional DCM II boards as well as some additional electronics,
+fibers, and crates to serve them.  A rough estimate of the cost is
+\$100--150k in electronics and a similar cost for engineering, for a
 total cost of about \$300k.  Due to parts obsolescence and continuing
-advances in electronics, it could be preferable to design a
-replacement for the DCM II modules, but it is not practical to consider such a
-project until the baseline electronics is installed and operating.
+advances in electronics, it might be preferable to design a
+replacement for the DCM II modules, but it is not practical to
+consider such a project until the baseline electronics is installed
+and operating.
 
 %%%
 
