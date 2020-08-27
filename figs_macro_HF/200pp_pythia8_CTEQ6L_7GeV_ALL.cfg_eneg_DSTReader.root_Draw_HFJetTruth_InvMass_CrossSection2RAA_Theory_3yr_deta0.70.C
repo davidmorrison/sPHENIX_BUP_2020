@@ -1,7 +1,7 @@
 {
 //=========Macro generated from canvas: Draw_HFJetTruth_InvMass_CrossSection2RAA_Theory_3yr_deta0.70/Draw_HFJetTruth_InvMass_CrossSection2RAA_Theory_3yr_deta0.70
-//=========  (Thu Aug 20 23:56:53 2020) by ROOT version5.34/38
-   TCanvas *Draw_HFJetTruth_InvMass_CrossSection2RAA_Theory_3yr_deta0.70 = new TCanvas("Draw_HFJetTruth_InvMass_CrossSection2RAA_Theory_3yr_deta0.70", "Draw_HFJetTruth_InvMass_CrossSection2RAA_Theory_3yr_deta0.70",1100,23,1100,800);
+//=========  (Thu Aug 27 00:01:36 2020) by ROOT version5.34/38
+   TCanvas *Draw_HFJetTruth_InvMass_CrossSection2RAA_Theory_3yr_deta0.70 = new TCanvas("Draw_HFJetTruth_InvMass_CrossSection2RAA_Theory_3yr_deta0.70", "Draw_HFJetTruth_InvMass_CrossSection2RAA_Theory_3yr_deta0.70",0,23,1100,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
    gStyle->SetOptTitle(0);
@@ -313,25 +313,25 @@
    gre->SetMarkerStyle(20);
    gre->SetMarkerSize(3);
    gre->SetPoint(0,27.5,0.4);
-   gre->SetPointError(0,0,0.05035811);
+   gre->SetPointError(0,0,0.05582118);
    gre->SetPoint(1,32.5,0.4);
-   gre->SetPointError(1,0,0.04081651);
+   gre->SetPointError(1,0,0.04524446);
    gre->SetPoint(2,37.5,0.4);
-   gre->SetPointError(2,0,0.05358745);
+   gre->SetPointError(2,0,0.05940084);
    gre->SetPoint(3,42.5,0.4);
-   gre->SetPointError(3,0,0.07589417);
+   gre->SetPointError(3,0,0.08412749);
    gre->SetPoint(4,47.5,0.4);
-   gre->SetPointError(4,0,0.1124603);
+   gre->SetPointError(4,0,0.1246605);
    gre->SetPoint(5,52.5,0.4);
-   gre->SetPointError(5,0,0.1600679);
+   gre->SetPointError(5,0,0.1774328);
    gre->SetPoint(6,57.5,0.4);
-   gre->SetPointError(6,0,0.215498);
+   gre->SetPointError(6,0,0.2388761);
    gre->SetPoint(7,62.5,0.4);
-   gre->SetPointError(7,0,0.3096367);
+   gre->SetPointError(7,0,0.3432274);
    
    TH1F *Graph_Graph_RAA_h_b_copy168169277712 = new TH1F("Graph_Graph_RAA_h_b_copy168169277712","Graph",100,24,66);
-   Graph_Graph_RAA_h_b_copy168169277712->SetMinimum(0.02843597);
-   Graph_Graph_RAA_h_b_copy168169277712->SetMaximum(0.771564);
+   Graph_Graph_RAA_h_b_copy168169277712->SetMinimum(0);
+   Graph_Graph_RAA_h_b_copy168169277712->SetMaximum(0.8118729);
    Graph_Graph_RAA_h_b_copy168169277712->SetDirectory(0);
    Graph_Graph_RAA_h_b_copy168169277712->SetStats(0);
    Graph_Graph_RAA_h_b_copy168169277712->SetLineWidth(2);
@@ -378,7 +378,7 @@
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("NULL","#it{p}+#it{p}: 101 pb^{-1} trig., 60% Eff., 40% Pur.","");
+   entry=leg->AddEntry("NULL","#it{p}+#it{p}: 62 pb^{-1} trig., 60% Eff., 40% Pur.","");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);

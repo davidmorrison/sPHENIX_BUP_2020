@@ -1,7 +1,7 @@
 void D0_BUP2020pp_significance_5yr()
 {
 //=========Macro generated from canvas: D0_BUP2020pp_significance_5yr/D0_BUP2020pp_significance_5yr
-//=========  (Wed Aug 26 18:27:39 2020) by ROOT version 6.16/00
+//=========  (Wed Aug 26 23:39:03 2020) by ROOT version 6.16/00
    TCanvas *D0_BUP2020pp_significance_5yr = new TCanvas("D0_BUP2020pp_significance_5yr", "D0_BUP2020pp_significance_5yr",0,0,1100,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);

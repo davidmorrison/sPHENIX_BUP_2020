@@ -1,7 +1,7 @@
 void 200pp_pythia8_CTEQ6L_7GeV_ALL.cfg_eneg_DSTReader.root_Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70()
 {
 //=========Macro generated from canvas: Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70/Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70
-//=========  (Thu Aug 20 23:48:20 2020) by ROOT version 6.16/00
+//=========  (Thu Aug 27 00:00:04 2020) by ROOT version 6.16/00
    TCanvas *Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70 = new TCanvas("Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70", "Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70",700,23,1100,800);
    gStyle->SetOptFit(1);
    gStyle->SetOptStat(0);
@@ -22,7 +22,7 @@ void 200pp_pythia8_CTEQ6L_7GeV_ALL.cfg_eneg_DSTReader.root_Draw_HFJetTruth_Cross
    TPad *Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1 = new TPad("Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1", "Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1",0.01,0.01,0.99,0.99);
    Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->Draw();
    Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->cd();
-   Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->Range(3.101266,-0.243038,52.46835,1.275949);
+   Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->Range(4.113924,-0.243038,47.1519,1.275949);
    Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->SetFillColor(0);
    Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->SetBorderMode(0);
    Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->SetBorderSize(2);
@@ -35,7 +35,7 @@ void 200pp_pythia8_CTEQ6L_7GeV_ALL.cfg_eneg_DSTReader.root_Draw_HFJetTruth_Cross
    Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->SetFrameBorderMode(0);
    Draw_HFJetTruth_CrossSection2RAA_Theory_3yr_deta0.70_1->SetFrameBorderMode(0);
    
-   TH1F *hframe__4 = new TH1F("hframe__4","",1000,11,50);
+   TH1F *hframe__4 = new TH1F("hframe__4","",1000,11,45);
    hframe__4->SetMinimum(0);
    hframe__4->SetMaximum(1.2);
    hframe__4->SetDirectory(0);
@@ -269,7 +269,7 @@ void 200pp_pythia8_CTEQ6L_7GeV_ALL.cfg_eneg_DSTReader.root_Draw_HFJetTruth_Cross
    
    graph->Draw("l");
    
-   Double_t RAA_h_b_copy347955387_fx1003[7] = {
+   Double_t RAA_h_b_copy339064740_fx1003[7] = {
    17.5,
    22.5,
    27.5,
@@ -277,7 +277,7 @@ void 200pp_pythia8_CTEQ6L_7GeV_ALL.cfg_eneg_DSTReader.root_Draw_HFJetTruth_Cross
    37.5,
    42.5,
    47.5};
-   Double_t RAA_h_b_copy347955387_fy1003[7] = {
+   Double_t RAA_h_b_copy339064740_fy1003[7] = {
    0.6,
    0.6,
    0.6,
@@ -285,7 +285,7 @@ void 200pp_pythia8_CTEQ6L_7GeV_ALL.cfg_eneg_DSTReader.root_Draw_HFJetTruth_Cross
    0.6,
    0.6,
    0.6};
-   Double_t RAA_h_b_copy347955387_fex1003[7] = {
+   Double_t RAA_h_b_copy339064740_fex1003[7] = {
    0,
    0,
    0,
@@ -293,46 +293,46 @@ void 200pp_pythia8_CTEQ6L_7GeV_ALL.cfg_eneg_DSTReader.root_Draw_HFJetTruth_Cross
    0,
    0,
    0};
-   Double_t RAA_h_b_copy347955387_fey1003[7] = {
-   0.005023945,
-   0.01208001,
-   0.02760028,
-   0.06074891,
-   0.1483522,
-   0.3317257,
-   0.5501048};
-   gre = new TGraphErrors(7,RAA_h_b_copy347955387_fx1003,RAA_h_b_copy347955387_fy1003,RAA_h_b_copy347955387_fex1003,RAA_h_b_copy347955387_fey1003);
-   gre->SetName("RAA_h_b_copy347955387");
+   Double_t RAA_h_b_copy339064740_fey1003[7] = {
+   0.005845569,
+   0.01405559,
+   0.03211407,
+   0.07068388,
+   0.172614,
+   0.3859766,
+   0.6400698};
+   gre = new TGraphErrors(7,RAA_h_b_copy339064740_fx1003,RAA_h_b_copy339064740_fy1003,RAA_h_b_copy339064740_fex1003,RAA_h_b_copy339064740_fey1003);
+   gre->SetName("RAA_h_b_copy339064740");
    gre->SetTitle("Graph");
    gre->SetFillStyle(1000);
    gre->SetLineWidth(4);
    gre->SetMarkerStyle(20);
    gre->SetMarkerSize(3);
    
-   TH1F *Graph_Graph_RAA_h_b_copy34795538710011003 = new TH1F("Graph_Graph_RAA_h_b_copy34795538710011003","Graph",100,14.5,50.5);
-   Graph_Graph_RAA_h_b_copy34795538710011003->SetMinimum(0.0449057);
-   Graph_Graph_RAA_h_b_copy34795538710011003->SetMaximum(1.260126);
-   Graph_Graph_RAA_h_b_copy34795538710011003->SetDirectory(0);
-   Graph_Graph_RAA_h_b_copy34795538710011003->SetStats(0);
-   Graph_Graph_RAA_h_b_copy34795538710011003->SetLineWidth(2);
-   Graph_Graph_RAA_h_b_copy34795538710011003->SetMarkerStyle(20);
-   Graph_Graph_RAA_h_b_copy34795538710011003->SetMarkerSize(1.2);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetXaxis()->SetLabelFont(42);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetXaxis()->SetLabelSize(0.05);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetXaxis()->SetTitleSize(0.05);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetXaxis()->SetTitleOffset(1.4);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetXaxis()->SetTitleFont(42);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetYaxis()->SetLabelFont(42);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetYaxis()->SetLabelSize(0.05);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetYaxis()->SetTitleSize(0.05);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetYaxis()->SetTitleOffset(1.4);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetYaxis()->SetTitleFont(42);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetZaxis()->SetLabelFont(42);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetZaxis()->SetLabelSize(0.05);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetZaxis()->SetTitleSize(0.05);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetZaxis()->SetTitleOffset(1);
-   Graph_Graph_RAA_h_b_copy34795538710011003->GetZaxis()->SetTitleFont(42);
-   gre->SetHistogram(Graph_Graph_RAA_h_b_copy34795538710011003);
+   TH1F *Graph_Graph_RAA_h_b_copy33906474010011003 = new TH1F("Graph_Graph_RAA_h_b_copy33906474010011003","Graph",100,14.5,50.5);
+   Graph_Graph_RAA_h_b_copy33906474010011003->SetMinimum(-0.1680837);
+   Graph_Graph_RAA_h_b_copy33906474010011003->SetMaximum(1.368084);
+   Graph_Graph_RAA_h_b_copy33906474010011003->SetDirectory(0);
+   Graph_Graph_RAA_h_b_copy33906474010011003->SetStats(0);
+   Graph_Graph_RAA_h_b_copy33906474010011003->SetLineWidth(2);
+   Graph_Graph_RAA_h_b_copy33906474010011003->SetMarkerStyle(20);
+   Graph_Graph_RAA_h_b_copy33906474010011003->SetMarkerSize(1.2);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetXaxis()->SetLabelFont(42);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetXaxis()->SetLabelSize(0.05);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetXaxis()->SetTitleSize(0.05);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetXaxis()->SetTitleOffset(1.4);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetXaxis()->SetTitleFont(42);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetYaxis()->SetLabelFont(42);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetYaxis()->SetLabelSize(0.05);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetYaxis()->SetTitleSize(0.05);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetYaxis()->SetTitleOffset(1.4);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetYaxis()->SetTitleFont(42);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetZaxis()->SetLabelFont(42);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetZaxis()->SetLabelSize(0.05);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetZaxis()->SetTitleSize(0.05);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetZaxis()->SetTitleOffset(1);
+   Graph_Graph_RAA_h_b_copy33906474010011003->GetZaxis()->SetTitleFont(42);
+   gre->SetHistogram(Graph_Graph_RAA_h_b_copy33906474010011003);
    
    gre->Draw("pe");
    
@@ -359,7 +359,7 @@ void 200pp_pythia8_CTEQ6L_7GeV_ALL.cfg_eneg_DSTReader.root_Draw_HFJetTruth_Cross
    entry->SetMarkerStyle(21);
    entry->SetMarkerSize(1);
    entry->SetTextFont(42);
-   entry=leg->AddEntry("NULL","#it{p}+#it{p}: 101pb^{-1} trig., 60% Eff., 40% Pur.","");
+   entry=leg->AddEntry("NULL","#it{p}+#it{p}: 62pb^{-1} trig., 60% Eff., 40% Pur.","");
    entry->SetLineColor(1);
    entry->SetLineStyle(1);
    entry->SetLineWidth(1);
